@@ -142,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/RV_MULTI/continuos_system/vector_fild_new.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#2083#6653#0" />
@@ -194,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="36" />
     <option name="y" value="25" />
     <option name="width" value="1330" />
@@ -359,7 +359,7 @@
     <entry file="file://$PROJECT_DIR$/RV_MULTI/continuos_system/vector_fild_new.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#2083#6653#0" />
