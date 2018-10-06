@@ -1,0 +1,28 @@
+Please run continuous_system/simulation_fully.py or continuous_system/simulation_uni.py for the simulation.
+
+continuous_system/triangle_plot.py
+	1. Plots trinagles
+	2. Return triangles x and y values
+	3. It is used in simulation for drawing the triangles
+continuous_system/vector_field.py
+	1. Returns the vector field for any point in the 2D environment
+	2. Plots the vector field 
+	3. Its input is state_order_{geometry}.txt
+continuous_system/simulation_fully.py
+	1. Simulates a fully-actuated robot
+	2. Has an input : geometry_name. 
+	3. Plases choose 'C' or 'D' as the geomtry_name
+continuous_system/simulation.uni.py
+	1. Simulates a unicycle robot
+	2. Has an input : geometry_name. 
+	3. Plases choose 'C' or 'D' as the geomtry_name
+discrete_system/discrete_path_plannar.py
+	1. Constructs the triangulations
+	2. Constructs the transition systems
+	3. Outputs the discrete system state order
+	4. Input is the a {geometry_name}.poly file 
+misc/vector_field_demo.py
+	1. Illustrates vector fields for a sample triangle
+misc/point_in_triangle
+	1. Demonstrates whether or not a point is within a triangle
+
