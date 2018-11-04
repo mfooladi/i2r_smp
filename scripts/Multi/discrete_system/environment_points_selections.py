@@ -40,10 +40,10 @@ pixelw = 1366.
 pixelh = 768.
 framedelay = 1
 # +y direction is to left and +x direction is upwards
-world_xmin = -60.
-world_ymin = -70.
-world_xmax = 57.
-world_ymax = 76.25
+world_xmin = -60. * 25.4 # mm
+world_ymin = -70. * 25.4 # mm
+world_xmax = 57. * 25.4 # mm
+world_ymax = 76.25 * 25.4 # mm
 world_width = world_ymax - world_ymin
 world_height = world_xmax - world_xmin
 win = Tk()

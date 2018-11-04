@@ -14,122 +14,24 @@
 *** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
 *** Copyright (c) 2007-2010, Niklas Sorensson
 
--- specification !(((((( F x.state = 38 &  F x.state = 7) &  F x.state = 58) &  F x.state = 6) &  F x.state = 50) &  F x.state = 69) &  F x.state = 39)  is false
+-- specification !( F x.state = 42)  is false
 -- as demonstrated by the following execution sequence
 Trace Description: LTL Counterexample 
 Trace Type: Counterexample 
   -> State: 1.1 <-
-    x.state = 118
-  -> State: 1.2 <-
-    x.state = 18
-  -> State: 1.3 <-
-    x.state = 5
-  -> State: 1.4 <-
-    x.state = 85
-  -> State: 1.5 <-
-    x.state = 83
-  -> State: 1.6 <-
     x.state = 69
-  -> State: 1.7 <-
-    x.state = 68
-  -> State: 1.8 <-
-    x.state = 66
-  -> State: 1.9 <-
-    x.state = 58
-  -> State: 1.10 <-
-    x.state = 34
-  -> State: 1.11 <-
+  -> State: 1.2 <-
     x.state = 72
-  -> State: 1.12 <-
-    x.state = 61
-  -> State: 1.13 <-
-    x.state = 59
-  -> State: 1.14 <-
-    x.state = 26
-  -> State: 1.15 <-
-    x.state = 16
-  -> State: 1.16 <-
-    x.state = 24
-  -> State: 1.17 <-
-    x.state = 35
-  -> State: 1.18 <-
-    x.state = 39
-  -> State: 1.19 <-
-    x.state = 35
-  -> State: 1.20 <-
-    x.state = 11
-  -> State: 1.21 <-
-    x.state = 37
-  -> State: 1.22 <-
-    x.state = 36
-  -> State: 1.23 <-
-    x.state = 12
-  -> State: 1.24 <-
-    x.state = 55
-  -> State: 1.25 <-
-    x.state = 7
-  -> State: 1.26 <-
-    x.state = 49
-  -> State: 1.27 <-
-    x.state = 43
-  -> State: 1.28 <-
-    x.state = 50
-  -> State: 1.29 <-
-    x.state = 43
-  -> State: 1.30 <-
-    x.state = 49
-  -> State: 1.31 <-
-    x.state = 52
-  -> State: 1.32 <-
-    x.state = 53
-  -> State: 1.33 <-
-    x.state = 54
-  -> State: 1.34 <-
-    x.state = 33
-  -> State: 1.35 <-
-    x.state = 57
-  -> State: 1.36 <-
-    x.state = 59
-  -> State: 1.37 <-
-    x.state = 61
-  -> State: 1.38 <-
-    x.state = 72
-  -> State: 1.39 <-
-    x.state = 81
-  -> State: 1.40 <-
-    x.state = 73
-  -> State: 1.41 <-
-    x.state = 80
-  -> State: 1.42 <-
-    x.state = 6
-  -> State: 1.43 <-
-    x.state = 80
-  -> State: 1.44 <-
-    x.state = 65
-  -> State: 1.45 <-
-    x.state = 34
-  -> State: 1.46 <-
-    x.state = 72
-  -> State: 1.47 <-
-    x.state = 61
-  -> State: 1.48 <-
-    x.state = 59
-  -> State: 1.49 <-
-    x.state = 26
-  -> State: 1.50 <-
-    x.state = 31
-  -> State: 1.51 <-
-    x.state = 15
-  -> State: 1.52 <-
-    x.state = 30
-  -> State: 1.53 <-
-    x.state = 40
-  -> State: 1.54 <-
-    x.state = 38
+  -> State: 1.3 <-
+    x.state = 17
+  -> State: 1.4 <-
+    x.state = 44
+  -> State: 1.5 <-
+    x.state = 42
   -- Loop starts here
-  -> State: 1.55 <-
-    x.state = 176
-  -> State: 1.56 <-
-    x.state = 175
-  -> State: 1.57 <-
-    x.state = 176
+  -> State: 1.6 <-
+    x.state = 44
+  -> State: 1.7 <-
+    x.state = 67
+  -> State: 1.8 <-
+    x.state = 44
