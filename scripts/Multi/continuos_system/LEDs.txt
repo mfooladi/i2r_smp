@@ -1,0 +1,7 @@
+khepera 12 LED 14 - 15
+khepera 10 LED 10 - 11
+14 LED 18 19 
+15 LED 16 17  
+
+
+rosrun Kh_and_Parrot playerros_node_phasespace -ip 192.168.1.14
