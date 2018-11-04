@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Read the markers and publish the agent position
 import rospy
 from geometry_msgs.msg import (
     Twist,
@@ -6,10 +7,10 @@ from geometry_msgs.msg import (
 )
 import math
 import numpy as np
-
-khiii_pos_1 = Vector3()
-khiii_pos_2 = Vector3()
-khiii_pose = Twist()
+# this is simply reading the two markers and calculating the center poistion and the agent orientation
+khiii_pos_1 = Vector3() # marker 1
+khiii_pos_2 = Vector3() # marker 2
+khiii_pose = Twist() # position to be published
 velocity_instant = Twist()
 
 global pub_khiii_pose
@@ -18,8 +19,8 @@ pos_1_update = False
 pos_2_update = False
 recfile = open('khiii_pos.txt', 'w')
 recfile.write('t,\t,pos1,\t,pos2')
-recording = True
-def read_pos_1(pos):
+recording = False # change to true to record the position and write it on khiii_pos.txt file
+def read_pos_1(pos): # read sensor 1
     global khiii_pos_1, pos_1_update
     if pos.x == 0 and pos.y == 0 and pos.z == 0:
         pos_1_update = False
@@ -30,7 +31,7 @@ def read_pos_1(pos):
     pos_1_update = True
     update()
 
-def read_pos_2(pos):
+def read_pos_2(pos): # read sensor 2
     global khiii_pos_2, pos_2_update
     if pos.x == 0 and pos.y == 0 and pos.z == 0:
         pos_2_update = False
@@ -42,10 +43,10 @@ def read_pos_2(pos):
     update()
 position_pre = 0.0
 time_pre = 0.0
-def update():
-    global recfile, start_time, khiii_pos_1, khiii_pos_2, pub_khiii_pose, position_pre, time_pre, pub_khiii_vel_instant
-    if pos_1_update and pos_2_update:
 
+def update(): # update the position
+    global recfile, start_time, khiii_pos_1, khiii_pos_2, pub_khiii_pose, position_pre, time_pre, pub_khiii_vel_instant
+    if pos_1_update and pos_2_update: # if both sensros have read the new position then publish the position topic
         vector_12 = Twist()
         vector_12.linear.x = khiii_pos_2.x - khiii_pos_1.x
         vector_12.linear.y = khiii_pos_2.y - khiii_pos_1.y
@@ -66,7 +67,7 @@ def update():
 
 def stop():
     global recfile
-    # recfile.close()
+    recfile.close()
 
 def recorder():
     global start_time, pub_khiii_pose, pub_khiii_vel_instant
@@ -79,11 +80,6 @@ def recorder():
     rospy.Subscriber("LED18", Vector3, read_pos_2)
     rospy.on_shutdown(stop)
     rospy.spin()
-    while not rospy.is_shutdown():
-        hello_str = "hello world %s" % rospy.get_time()
-        rospy.loginfo(hello_str)
-        pub_khiii_pose.publish(hello_str)
-        rate.sleep()
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Implementing the Input-Output Static Feedback Linearization Controller for unicycle (khepera III)
 import rospy
 import numpy as np
 import math
@@ -8,22 +9,25 @@ import matplotlib
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 
-# Add a new instance of agent
 ugv_pose = Twist()
 vf_angle = Twist()
 
-def vector_field_test(pos):
+def vector_field_test(pos): # generate the velocity vector field inside a triangle
     v_max = 1.0
+    # g-value at the vertex in degree
     g1_angle = 0.0
     g2_angle = 0.
     g3_angle = -50.
+    # g-values in terms of i-j vectors
     g1 = np.array([np.cos(np.radians(g1_angle)), np.sin(np.radians(g1_angle))])
     g2 = np.array([np.cos(np.radians(g2_angle)), np.sin(np.radians(g2_angle))])
     g3 = np.array([np.cos(np.radians(g3_angle)), np.sin(np.radians(g3_angle))])
     Glocal = np.matrix([g1, g2, g3]).transpose()
+    # vertex positions
     v1 = [0., 0.]
     v2 = [1270., 0.]
     v3 = [0., 1778.]
+    # Vertex positions in matrix form
     W = [[v1[0], v2[0], v3[0]], [v1[1], v2[1], v3[1]], [1.0, 1.0, 1.0]]
     inv_W = np.matrix(W) ** -1
     GW = Glocal * inv_W
@@ -31,7 +35,7 @@ def vector_field_test(pos):
     theta = math.atan2(velocity_at_point[1], velocity_at_point[0])
     return velocity_at_point, theta
 
-def plot_vf_one_triangle():
+def plot_vf_one_triangle(): # plot the vector field inside the triangle
     g1_angle = 89.0
     g2_angle = 30.
     g3_angle = -50.

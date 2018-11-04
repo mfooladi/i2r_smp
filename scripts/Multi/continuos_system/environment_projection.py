@@ -1,6 +1,6 @@
 from Tkinter import *
 from PIL import Image, ImageDraw
-
+# this is to test the top-down projector - calibrating the projection area
 win = Tk()
 win.geometry("{}x{}+{}+{}".format(1366, 768, 1000, 0))
 win.wm_attributes('-fullscreen', True)
