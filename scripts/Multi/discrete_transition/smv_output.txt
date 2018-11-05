@@ -19,19 +19,25 @@
 Trace Description: LTL Counterexample 
 Trace Type: Counterexample 
   -> State: 1.1 <-
-    x.state = 69
+    x.state = 97
   -> State: 1.2 <-
-    x.state = 72
+    x.state = 95
   -> State: 1.3 <-
-    x.state = 17
+    x.state = 91
   -> State: 1.4 <-
-    x.state = 44
+    x.state = 100
   -> State: 1.5 <-
+    x.state = 21
+  -> State: 1.6 <-
+    x.state = 84
+  -> State: 1.7 <-
+    x.state = 13
+  -> State: 1.8 <-
     x.state = 42
   -- Loop starts here
-  -> State: 1.6 <-
+  -> State: 1.9 <-
     x.state = 44
-  -> State: 1.7 <-
+  -> State: 1.10 <-
     x.state = 67
-  -> State: 1.8 <-
+  -> State: 1.11 <-
     x.state = 44

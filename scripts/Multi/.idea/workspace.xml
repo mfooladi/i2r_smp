@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf52edc0-af06-494c-89c6-b1493c93d37b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/continuos_system/UGV_IOSFL.py" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/UGV_IOSFL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/continuos_system/environment_projection.py" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/environment_projection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../track.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vector_field_tracker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/continuos_system/fig.png" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/fig.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/continuos_system/multi_ugvs.py" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/multi_ugvs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discrete_transition/output_file.smv" beforeDir="false" afterPath="$PROJECT_DIR$/discrete_transition/output_file.smv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discrete_transition/smv_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/discrete_transition/smv_output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discrete_transition/state_order_lab_cnfg1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/discrete_transition/state_order_lab_cnfg1.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="multi_ugvs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multi_ugvs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/continuos_system/multi_ugvs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="790">
+              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
               <folding>
                 <element signature="e#22#34#0" expanded="true" />
               </folding>
@@ -35,8 +37,8 @@
       <file leaf-file-name="vector_fild_new.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/continuos_system/vector_fild_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="678" column="12" lean-forward="true" selection-start-line="678" selection-start-column="12" selection-end-line="678" selection-end-column="12" />
+            <state relative-caret-position="-432">
+              <caret line="636" column="23" selection-start-line="636" selection-start-column="23" selection-end-line="636" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#8018#8697#0" />
@@ -61,13 +63,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UGV_IOSFL.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/continuos_system/UGV_IOSFL.py">
+      <file leaf-file-name="environment_projection.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/continuos_system/environment_projection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="109" column="16" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+            <state relative-caret-position="150">
+              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
               <folding>
-                <element signature="e#22#34#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,18 +135,18 @@
         <option value="$PROJECT_DIR$/discrete_system/environment_points_selections.py" />
         <option value="$PROJECT_DIR$/continuos_system/unicycleInputOutputStaticFeedbackLinearization.py" />
         <option value="$PROJECT_DIR$/continuos_system/vector_fild_new.py" />
-        <option value="$PROJECT_DIR$/continuos_system/multi_ugvs.py" />
         <option value="$PROJECT_DIR$/../tracker.py" />
-        <option value="$PROJECT_DIR$/continuos_system/environment_projection.py" />
         <option value="$PROJECT_DIR$/continuos_system/UGV_IOSFL.py" />
+        <option value="$PROJECT_DIR$/continuos_system/environment_projection.py" />
+        <option value="$PROJECT_DIR$/continuos_system/multi_ugvs.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="230" />
-    <option name="y" value="53" />
-    <option name="width" value="1077" />
-    <option name="height" value="683" />
+    <option name="x" value="348" />
+    <option name="y" value="25" />
+    <option name="width" value="1338" />
+    <option name="height" value="699" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -155,11 +157,26 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Multi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Multi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Multi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Multi" type="462c0819:PsiDirectoryNode" />
+              <item name="continuos_system" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../vnev" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Maziar/RV_MULTI" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -276,9 +293,9 @@
       <list>
         <item itemvalue="Python.multi_ugvs" />
         <item itemvalue="Python.environment_projection" />
+        <item itemvalue="Python.environment_points_selections" />
         <item itemvalue="Python.UGV_IOSFL" />
         <item itemvalue="Python.vector_fild_new" />
-        <item itemvalue="Python.environment_points_selections" />
       </list>
     </recent_temporary>
   </component>
@@ -311,12 +328,12 @@
     <frame x="-1" y="25" width="1368" height="747" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49748743" visible="true" weight="0.25799257" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49748743" visible="true" weight="0.25799257" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018587" side_tool="true" weight="0.4124579" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49814126" weight="0.32659933" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49962825" weight="0.32828283" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49814126" weight="0.36531988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49814126" visible="true" weight="0.36531988" />
       <window_info id="Structure" order="2" sideWeight="0.496633" side_tool="true" weight="0.18066914" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="0" sideWeight="0.503367" side_tool="true" weight="0.24981412" />
@@ -380,11 +397,6 @@
           <url>file://$PROJECT_DIR$/continuos_system/UGV_IOSFL.py</url>
           <line>64</line>
           <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/continuos_system/multi_ugvs.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -484,9 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-          <folding>
-            <element signature="e#22#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -534,9 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-          <folding>
-            <element signature="e#22#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#22#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -717,10 +720,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../track.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vector_field_tracker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/lib-tk/Tkinter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="2041" selection-start-line="2041" selection-end-line="2041" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tracker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding>
+            <element signature="e#22#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Maziar/RV_MULTI/continuos_system/vector_fild_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continuos_system/environment_projection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continuos_system/UGV_IOSFL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="109" column="16" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/continuos_system/vector_fild_new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="678" column="12" lean-forward="true" selection-start-line="678" selection-start-column="12" selection-end-line="678" selection-end-column="12" />
+        <state relative-caret-position="-432">
+          <caret line="636" column="23" selection-start-line="636" selection-start-column="23" selection-end-line="636" selection-end-column="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#8018#8697#0" />
@@ -744,57 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../track.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vector_field_tracker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/lib-tk/Tkinter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="2041" selection-start-line="2041" selection-end-line="2041" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/continuos_system/multi_ugvs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#22#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tracker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="e#22#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/continuos_system/environment_projection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/continuos_system/UGV_IOSFL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="109" column="16" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+        <state relative-caret-position="790">
+          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
           <folding>
             <element signature="e#22#34#0" expanded="true" />
           </folding>

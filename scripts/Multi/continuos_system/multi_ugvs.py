@@ -12,11 +12,13 @@ recording = True
 ugv_pose = Twist()
 vf_angle = Twist()
 init_pos = Twist()
+monitoring_info = String()
+
 global pub_ugv_cmd, ugv, initialized
 initialized = True
 
 def read_pose(pos):
-    global ugv_pose, initialized, initial_adjustment, ugv
+    global ugv_pose, initialized, initial_adjustment, ugv, pub_mo
     if initialized:
         init_pos.linear.x = pos.linear.x
         init_pos.linear.y = pos.linear.y
@@ -34,14 +36,13 @@ def read_pose(pos):
         ugv_pose.angular.z = pos.angular.z
         pub_ugv_pose.publish(ugv_pose)
         ugv.current_position = [ugv_pose.linear.x, ugv_pose.linear.y]
+        pub_monitoring_info.publish(str(pos)+','+str(ugv.current_position)+','+str(ugv.current_state))
         vel = ugv.move(current_pos=[ugv_pose.linear.x, ugv_pose.linear.y], current_state=ugv.current_state, current_patch=ugv.current_patch)
         if ugv.is_finished:
             print 'finished'
             vel = [0., 0.]
 
         update(vel, pos.angular.z)
-
-
         # rec_time = rospy.get_time() - start_time
         # recfile.write(str(rec_time) + '\t' + str(pos.linear.x) + ',' + str(ugv_pose.linear.y) + ',' + str(ugv_pose.angular.z) + '\n')
 
@@ -60,13 +61,14 @@ def stop():
     pub_ugv_cmd.publish(cmd)
 
 def recorder():
-    global start_time, pub_ugv_cmd, pub_ugv_pose
-    pub_ugv_pose = rospy.Publisher('ugv_pose', Twist, queue_size=1)
-    rospy.init_node('ugv_smp', anonymous=True)
-    rate = rospy.Rate(10)
+    global start_time, pub_ugv_cmd, pub_ugv_pose, pub_monitoring_info
+    pub_ugv_pose = rospy.Publisher('ugv_pose', Twist, queue_size = 1)
+    pub_monitoring_info = rospy.Publisher('monitoring', String, queue_size = 10)
+    rospy.init_node('ugv_smp', anonymous = True)
+    rate = rospy.Rate(1)
     start_time = rospy.get_time()
     rospy.Subscriber("khiii/khiii_pose", Twist, read_pose)
-    pub_ugv_cmd = rospy.Publisher('/HKE/cmd_velGA', Twist, queue_size=1)
+    pub_ugv_cmd = rospy.Publisher('/HKE/cmd_velGA', Twist, queue_size = 1)
     rospy.on_shutdown(stop)
     rospy.spin()
 
