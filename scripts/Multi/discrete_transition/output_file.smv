@@ -6,7 +6,7 @@ MODULE grid
 VAR
 state : 1..144;
 ASSIGN
-init(state) := 97;
+init(state) := 24;
 next(state) := 
 case
 state = 1 : {105, 104, 26};

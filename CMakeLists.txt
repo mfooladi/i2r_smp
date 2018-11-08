@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  actionlib_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -71,11 +72,21 @@ find_package(catkin REQUIRED COMPONENTS
 #   Action2.action
 # )
 
+add_action_files(
+    FILES
+    Fibonacci.action
+)
+
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
 #   geometry_msgs#   sensor_msgs#   std_msgs
 # )
+
+generate_messages(
+DEPENDENCIES
+actionlib_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##

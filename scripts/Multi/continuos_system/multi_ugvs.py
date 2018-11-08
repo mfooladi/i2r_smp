@@ -13,12 +13,13 @@ ugv_pose = Twist()
 vf_angle = Twist()
 init_pos = Twist()
 monitoring_info = String()
+published = True
 
 global pub_ugv_cmd, ugv, initialized
 initialized = True
 
 def read_pose(pos):
-    global ugv_pose, initialized, initial_adjustment, ugv, pub_mo
+    global ugv_pose, initialized, initial_adjustment, ugv, pub_mo, published
     if initialized:
         init_pos.linear.x = pos.linear.x
         init_pos.linear.y = pos.linear.y
@@ -41,19 +42,24 @@ def read_pose(pos):
         if ugv.is_finished:
             print 'finished'
             vel = [0., 0.]
+        if abs(pos.linear.x - ugv_pose.linear.x) < 1.:
+            published = True
 
-        update(vel, pos.angular.z)
+        if published:
+            published = False
+            update(vel, pos.angular.z)
         # rec_time = rospy.get_time() - start_time
         # recfile.write(str(rec_time) + '\t' + str(pos.linear.x) + ',' + str(ugv_pose.linear.y) + ',' + str(ugv_pose.angular.z) + '\n')
 
 
 def update(vel, current_theta):
-    global pub_ugv_cmd
+    global pub_ugv_cmd, published
     b = .25
     cmd = Twist()
     cmd.linear.x =  vel[0] * np.cos(current_theta) + vel[1] * np.sin(current_theta)
     cmd.angular.z = 1/b * (vel[1]* np.cos(current_theta) - vel[0] * np.sin(current_theta))
     pub_ugv_cmd.publish(cmd)
+    # published = True
 
 def stop():
     global pub_ugv_cmd
@@ -61,9 +67,9 @@ def stop():
     pub_ugv_cmd.publish(cmd)
 
 def recorder():
-    global start_time, pub_ugv_cmd, pub_ugv_pose, pub_monitoring_info
+    global start_time, pub_ugv_cmd, pub_ugv_pose, pub_monitoring_info, published
     pub_ugv_pose = rospy.Publisher('ugv_pose', Twist, queue_size = 1)
-    pub_monitoring_info = rospy.Publisher('monitoring', String, queue_size = 10)
+    pub_monitoring_info = rospy.Publisher('monitoring', String, queue_size = 1)
     rospy.init_node('ugv_smp', anonymous = True)
     rate = rospy.Rate(1)
     start_time = rospy.get_time()
