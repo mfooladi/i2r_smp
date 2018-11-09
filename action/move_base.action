@@ -1,0 +1,12 @@
+#goal definition
+float32 x_current	# in meters
+float32 y_current	# in meters
+float32 theta_current	# in radians
+bool ignore_rotation 	#if true robot is not rotated after moving. if false robot is rotated "rotation" relative to the starting orientation
+---
+#result definition
+bool goal_reached	#true if goal is reached
+---
+#feedback
+float32 v_x		# linear velocity range is -0.5 to 0.5
+float32 v_z		# angular velocity range is -0.5 to 0.5

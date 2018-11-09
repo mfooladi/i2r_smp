@@ -6,6 +6,7 @@ import actionlib
 # Brings in the messages used by the fibonacci action, including the
 # goal message and the result message.
 import actionlib_tutorials.msg
+actionlib_tutorials.
 
 def fibonacci_client():
     # Creates the SimpleActionClient, passing the type of the action

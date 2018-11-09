@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf52edc0-af06-494c-89c6-b1493c93d37b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/continuos_system/MoveBaseClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/continuos_system/MoveBaseServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/continuos_system/multi_ugvs.py" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/multi_ugvs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/continuos_system/LEDs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/LEDs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/continuos_system/ugv_pos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/continuos_system/ugv_pos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discrete_transition/output_file.smv" beforeDir="false" afterPath="$PROJECT_DIR$/discrete_transition/output_file.smv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discrete_transition/smv_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/discrete_transition/smv_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discrete_transition/state_order_lab_cnfg1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/discrete_transition/state_order_lab_cnfg1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fibonacci_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fibonacci_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fibonacci_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fibonacci_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../khiii_pos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../khiii_pos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tracker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,13 +25,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="multi_ugvs.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="multi_ugvs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/continuos_system/multi_ugvs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="405">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="58" />
               <folding>
                 <element signature="e#22#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveBaseServer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/continuos_system/MoveBaseServer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+              <folding>
+                <element signature="e#24#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveBaseClient.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/continuos_system/MoveBaseClient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,12 +64,10 @@
       <file leaf-file-name="vector_fild_new.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/continuos_system/vector_fild_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1086">
-              <caret line="636" column="23" selection-start-line="636" selection-start-column="23" selection-end-line="636" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="197" column="17" lean-forward="true" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#8018#8697#0" />
-                <element signature="e#9117#10945#0" />
                 <element signature="e#27419#29371#0" />
                 <element signature="e#30415#31305#0" />
                 <element signature="e#33165#38681#0" />
@@ -138,6 +164,8 @@
         <option value="$PROJECT_DIR$/continuos_system/UGV_IOSFL.py" />
         <option value="$PROJECT_DIR$/continuos_system/environment_projection.py" />
         <option value="$PROJECT_DIR$/continuos_system/multi_ugvs.py" />
+        <option value="$PROJECT_DIR$/continuos_system/MoveBaseClient.py" />
+        <option value="$PROJECT_DIR$/continuos_system/MoveBaseServer.py" />
       </list>
     </option>
   </component>
@@ -189,7 +217,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.multi_ugvs">
+  <component name="RunManager" selected="Python.MoveBaseClient">
+    <configuration name="MoveBaseClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Multi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/continuos_system" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/continuos_system/MoveBaseClient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="UGV_IOSFL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Multi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -262,38 +308,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="vector_fild_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Multi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/continuos_system" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/continuos_system/vector_fild_new.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.vector_fild_new" />
       <item itemvalue="Python.multi_ugvs" />
       <item itemvalue="Python.environment_points_selections" />
       <item itemvalue="Python.UGV_IOSFL" />
       <item itemvalue="Python.environment_projection" />
+      <item itemvalue="Python.MoveBaseClient" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MoveBaseClient" />
         <item itemvalue="Python.multi_ugvs" />
         <item itemvalue="Python.environment_projection" />
         <item itemvalue="Python.environment_points_selections" />
         <item itemvalue="Python.UGV_IOSFL" />
-        <item itemvalue="Python.vector_fild_new" />
       </list>
     </recent_temporary>
   </component>
@@ -326,13 +354,13 @@
     <frame x="-1" y="25" width="1368" height="747" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49748743" weight="0.32922202" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49748743" weight="0.19033457" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018587" side_tool="true" weight="0.4124579" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49814126" weight="0.32659933" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49962825" weight="0.32828283" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49814126" visible="true" weight="0.36531988" />
-      <window_info id="Structure" order="2" sideWeight="0.496633" side_tool="true" weight="0.18066914" />
+      <window_info id="Structure" order="2" sideWeight="0.496633" side_tool="true" visible="true" weight="0.18066914" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="0" sideWeight="0.503367" side_tool="true" weight="0.24981412" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49814126" weight="0.4040404" />
@@ -396,11 +424,16 @@
           <line>64</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/continuos_system/MoveBaseClient.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="28" />
+      <option name="time" value="29" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -469,8 +502,6 @@
           <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#8018#8697#0" />
-            <element signature="e#9117#10945#0" />
             <element signature="e#27419#29371#0" />
             <element signature="e#30415#31305#0" />
             <element signature="e#33165#38681#0" />
@@ -550,8 +581,6 @@
           <caret line="640" column="8" selection-start-line="640" selection-start-column="8" selection-end-line="640" selection-end-column="8" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#8018#8697#0" />
-            <element signature="e#9117#10945#0" />
             <element signature="e#27419#29371#0" />
             <element signature="e#30415#31305#0" />
             <element signature="e#33165#38681#0" />
@@ -597,8 +626,6 @@
           <caret line="408" column="34" selection-start-line="408" selection-start-column="34" selection-end-line="408" selection-end-column="34" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#8018#8697#0" />
-            <element signature="e#9117#10945#0" />
             <element signature="e#27419#29371#0" />
             <element signature="e#30415#31305#0" />
             <element signature="e#33165#38681#0" />
@@ -761,14 +788,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/continuos_system/environment_projection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/continuos_system/vector_fild_new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1086">
-          <caret line="636" column="23" selection-start-line="636" selection-start-column="23" selection-end-line="636" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="197" column="17" lean-forward="true" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="17" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#8018#8697#0" />
-            <element signature="e#9117#10945#0" />
             <element signature="e#27419#29371#0" />
             <element signature="e#30415#31305#0" />
             <element signature="e#33165#38681#0" />
@@ -788,22 +823,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continuos_system/environment_projection.py">
+    <entry file="file://$PROJECT_DIR$/continuos_system/multi_ugvs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="405">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="58" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#22#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continuos_system/multi_ugvs.py">
+    <entry file="file://$PROJECT_DIR$/continuos_system/MoveBaseClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="189">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
-            <element signature="e#22#34#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continuos_system/MoveBaseServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#36#0" expanded="true" />
           </folding>
         </state>
       </provider>

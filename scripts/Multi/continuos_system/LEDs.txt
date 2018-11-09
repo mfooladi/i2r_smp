@@ -5,3 +5,5 @@ khepera 10 LED 10 - 11
 
 
 rosrun Kh_and_Parrot playerros_node_phasespace -ip 192.168.1.14
+
+rosrun actionlib_msgs genaction.py -o msg/ action/Averaging.action

@@ -76,8 +76,8 @@ def recorder():
     rospy.init_node('khiii_tracker', anonymous=True)
     rospy.Rate(1)
     start_time = rospy.get_time()
-    rospy.Subscriber("LED19", Vector3, read_pos_1)
-    rospy.Subscriber("LED18", Vector3, read_pos_2)
+    rospy.Subscriber("LED17", Vector3, read_pos_1)
+    rospy.Subscriber("LED16", Vector3, read_pos_2)
     rospy.on_shutdown(stop)
     rospy.spin()
 
