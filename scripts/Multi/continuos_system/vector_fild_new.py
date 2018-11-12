@@ -339,6 +339,7 @@ class State(Triangle):
                 self.last_tri_gs.append(interval([angle_right, 180.], [-180., angle_left]))
             else:
                 self.last_tri_gs.append(interval([angle_right, angle_left]))
+        # print ('last triangle gs', self.last_tri_gs)
         return self.last_tri_gs
 
     def vertex_ijk(self):
@@ -352,31 +353,28 @@ class State(Triangle):
     def patches(self):
         self.patch_list = []
         self.patch_state_list = []
-        last_valid_patch = dict()
+        # last_valid_patch = dict()
         state_iter = 1
         pre_length = 0
         while state_iter <= self.state_total_number:
             self.patch_state_list.append(state_iter)
             new_g1 = new_g2 = new_g3 = interval([0,1])
+            # new_g1 = self.vector_field[self.v1v2v3(state_iter)[0]] & self.gs[state_iter - 1][0]
+            # new_g2 = self.vector_field[self.v1v2v3(state_iter)[1]] & self.gs[state_iter - 1][1]
+            # new_g3 = self.vector_field[self.v1v2v3(state_iter)[2]] & self.gs[state_iter - 1][2]
             try:
                 new_g1 = self.vector_field[self.v1v2v3(state_iter)[0]] & self.gs[state_iter - 1][0]
-                # print new_g1, 'new g1'
             except:
-                # print 'v1 does not exist', self.v1v2v3(state_iter)[0]
-                a = True
+                print 'v1 does not exist', self.v1v2v3(state_iter)[0]
             try:
                 new_g2 = self.vector_field[self.v1v2v3(state_iter)[1]] & self.gs[state_iter - 1][1]
-                # print new_g2, 'new g2'
             except:
-                # print 'v2 does not exist', self.v1v2v3(state_iter)[1]
-                a = True
+                print 'v2 does not exist', self.v1v2v3(state_iter)[1]
             try:
                 new_g3 = self.vector_field[self.v1v2v3(state_iter)[2]] & self.gs[state_iter - 1][2]
-                # print new_g3, 'new g3'
             except:
-                # print 'v3 does not exist', self.v1v2v3(state_iter)[2]
-                a = True
-
+                print 'v3 does not exist', self.v1v2v3(state_iter)[2]
+            #
             if (new_g1 == interval() or new_g2 == interval() or new_g3 == interval()):
                 for i in range(0, 3):
                     if self.vector_field.has_key(self.v1v2v3(state_iter)[i]):  # if the vertice has been seen before
@@ -417,11 +415,9 @@ class State(Triangle):
         for i in range(0, patch_num):
             last_patches_total_length += len(self.patch_list[i]) - 2
         local_state = state_num + patch_num - 1 - last_patches_total_length
-        # print self.v1v2v3(state_num)
         g1_angle = self.patch_list[patch_num - 1][self.v1v2v3(state_num)[0]].midpoint
         g2_angle = self.patch_list[patch_num - 1][self.v1v2v3(state_num)[1]].midpoint
         g3_angle = self.patch_list[patch_num - 1][self.v1v2v3(state_num)[2]].midpoint
-        # print 'g1g2g3 angles', g1_angle, g2_angle, g3_angle
         g1 = np.array([np.cos(np.radians(g1_angle)[0][0]), np.sin(np.radians(g1_angle)[0][0])])
         g2 = np.array([np.cos(np.radians(g2_angle)[0][0]), np.sin(np.radians(g2_angle)[0][0])])
         g3 = np.array([np.cos(np.radians(g3_angle)[0][0]), np.sin(np.radians(g3_angle)[0][0])])
@@ -653,7 +649,8 @@ class Robot(State):
         current_vel = self.curent_velocity
 
         if  int(self.triangle_number(self.current_state)) in self.goal_list: #if the agent is in the goal region
-            print 'last goal'
+            print 'Im in the goal region'
+            print 'goal:', int(self.triangle_number(self.current_state))
             self.not_visted_goals.remove(int(self.triangle_number(self.current_state)))
             self.visited_goals.append(self.current_state)
 
@@ -661,18 +658,22 @@ class Robot(State):
                 self.is_finished = True
 
         self.state_has_changed = self.ispoint_in_tri(current_pos, current_state) # check see if the agent has moved to a new state
-
-        if self.local_state == len(self.patch_list[self.current_patch - 1]): # if the agent current state is the last in the patch
+        # print 'local state', self.local_state, 'patch lentgh', len(self.patch_list[self.current_patch - 1])
+        if self.local_state == len(self.patch_list[self.current_patch - 1]) - 2: # if the agent current state is the last in the patch
             self.curent_velocity = np.array(self.vector_field_point(current_pos, self.current_patch, self.current_state, self.v_max)[0]) # update velocity
             # if np.sqrt(current_vel[0] ** 2 + current_vel[1] ** 2) < 0.05: # if velocity is less than 0.05 stop the agent and start the next patch if any otherswise keep going
-            self.curent_velocity = np.array([0., 0.]) # stop the agent
-            self.local_state == len(self.patch_list[self.current_patch - 1])# update the local state to 1
-            self.current_state += 1
+            # self.curent_velocity = np.array([0., 0.]) # stop the agent
+            # self.local_state == len(self.patch_list[self.current_patch - 1])# update the local state to 1
+            # update the local state to 1
+            # self.current_state += 1
             if self.current_patch == len(self.patch_length): # if the current patch is the last patch finish otherwise update the state and the patch number
                 self.is_finished = True # signal to finish
             else:
                 self.current_patch += 1
-                self.current_state += 1
+                # self.current_state += 1
+                self.local_state = 1
+                self.state_has_changed = True
+                # print 'patch changed', self.current_patch, self.current_state, self.local_state
 
             # else:
             #     self.curent_velocity = np.array(self.vector_field_point(current_pos, self.current_patch, self.current_state, self.v_max)[0]) # let it go till it stops
@@ -682,8 +683,8 @@ class Robot(State):
             self.state_has_changed = False
             self.local_state += 1
             self.current_state += 1
-            print 'state', self.current_state
-            print 'local state', self.local_state
+            # print 'state', self.current_state
+            # print 'local state', self.local_state
             self.curent_velocity = np.array(self.vector_field_point(current_pos, self.current_patch, self.current_state, self.v_max)[0])
 
         return self.curent_velocity

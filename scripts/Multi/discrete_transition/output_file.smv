@@ -1,12 +1,12 @@
 MODULE main
 VAR
 x : grid;
-LTLSPEC !( ( F (x.state = 42) ) )
+LTLSPEC !( ( F (x.state = 42) & F (x.state = 43) & F (x.state = 44) & F (x.state = 1) ) )
 MODULE grid
 VAR
 state : 1..144;
 ASSIGN
-init(state) := 24;
+init(state) := 135;
 next(state) := 
 case
 state = 1 : {105, 104, 26};

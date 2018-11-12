@@ -14,28 +14,44 @@
 *** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
 *** Copyright (c) 2007-2010, Niklas Sorensson
 
--- specification !( F x.state = 42)  is false
+-- specification !((( F x.state = 42 &  F x.state = 43) &  F x.state = 44) &  F x.state = 1)  is false
 -- as demonstrated by the following execution sequence
 Trace Description: LTL Counterexample 
 Trace Type: Counterexample 
   -> State: 1.1 <-
-    x.state = 24
+    x.state = 135
   -> State: 1.2 <-
-    x.state = 90
+    x.state = 98
   -> State: 1.3 <-
-    x.state = 93
+    x.state = 134
   -> State: 1.4 <-
-    x.state = 86
+    x.state = 105
   -> State: 1.5 <-
-    x.state = 61
+    x.state = 1
   -> State: 1.6 <-
-    x.state = 13
+    x.state = 104
   -> State: 1.7 <-
-    x.state = 42
-  -- Loop starts here
+    x.state = 101
   -> State: 1.8 <-
-    x.state = 44
+    x.state = 8
   -> State: 1.9 <-
-    x.state = 67
+    x.state = 21
   -> State: 1.10 <-
+    x.state = 84
+  -> State: 1.11 <-
+    x.state = 13
+  -> State: 1.12 <-
+    x.state = 42
+  -> State: 1.13 <-
     x.state = 44
+  -> State: 1.14 <-
+    x.state = 17
+  -> State: 1.15 <-
+    x.state = 43
+  -- Loop starts here
+  -> State: 1.16 <-
+    x.state = 66
+  -> State: 1.17 <-
+    x.state = 40
+  -> State: 1.18 <-
+    x.state = 66

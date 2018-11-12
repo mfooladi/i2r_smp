@@ -3,6 +3,14 @@ khepera 10 LED 10 - 11
 14 LED 18 19 
 15 LED 16 17  
 
+10 HKC LED 10 11
+11 HKB LED 12 13 
+12 HKA
+13 HKD
+14 HKE
+15 HKF
+
+
 
 rosrun Kh_and_Parrot playerros_node_phasespace -ip 192.168.1.14
 

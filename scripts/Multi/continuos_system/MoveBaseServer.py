@@ -12,19 +12,17 @@ from i2r_smp.msg import move_baseAction, move_baseActionFeedback, move_baseActio
 
 class MoveBaseServer(object):
     # create messages that are used to publish feedback/result
-    # _goal = move_baseAction.action_goal
     _feedback = move_baseActionFeedback
     _result = move_baseActionResult
 
     def __init__(self, name):
         rospy.loginfo('inited')
-        # self._action_name = name
-        self._as = actionlib.SimpleActionServer('mb', move_baseAction, execute_cb=self.execute_cb, auto_start=False)
+        self._action_name = name
+        self._as = actionlib.SimpleActionServer(self._action_name, move_baseAction, execute_cb=self.execute_cb, auto_start=False)
         self._as.start()
 
     def execute_cb(self, goal):
         # helper variables
-        rospy.loginfo('called back')
         r = rospy.Rate(3)
         success = True
 
@@ -44,6 +42,7 @@ class MoveBaseServer(object):
         self._feedback.v_x = goal.x_current
         self._feedback.v_z = goal.y_current
         self._as.publish_feedback(self._feedback)
+        self._result.v_x_result = self._feedback.v_x
         rospy.loginfo('vel linear , vel angular: %f %f: ' % (self._feedback.v_x, self._feedback.v_z))
         r.sleep()
 
