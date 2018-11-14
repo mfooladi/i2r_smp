@@ -32,7 +32,7 @@ class MoveBaseServer(object):
         # self._as.publish_feedback(self._feedback)
         # self._result.result_vel_published = self._feedback.feedback_vel_published
         # helper variables
-        r = rospy.Rate(200)
+        r = rospy.Rate(20)
         success = True
         p0 = [goal.x_current, goal.y_current]
         if goal.x_current != 0 and not self.initialized:
@@ -60,22 +60,16 @@ class MoveBaseServer(object):
         pub_ugv_cmd.publish(cmd)
         # pub_ugv_cmd.publish(cmd)
         # rospy.loginfo('%f %f' % (cmd.linear.x, cmd.angular.z))
+
         self._feedback.feedback_vel_published = True
         self._as.publish_feedback(self._feedback)
         self._result.result_vel_published = self._feedback.feedback_vel_published
         self._as.set_succeeded(self._result)
 
-        # rospy.loginfo(self._feedback.feedback_vel_published)
-        r.sleep()
-
-
-
-
 if __name__ == '__main__':
     rospy.init_node('move_base_server')
     server = MoveBaseServer(rospy.get_name())
     rate = rospy.Rate(50)
-    pub_ugv_cmd = rospy.Publisher('/HKE/cmd_velGA', Twist, queue_size=100)
+    pub_ugv_cmd = rospy.Publisher('/HKB/cmd_velGA', Twist, queue_size=100)
 
-    # rospy.on_shutdown(server.stop())
     rospy.spin()

@@ -14,44 +14,64 @@
 *** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
 *** Copyright (c) 2007-2010, Niklas Sorensson
 
--- specification !((( F x.state = 42 &  F x.state = 43) &  F x.state = 44) &  F x.state = 1)  is false
+-- specification !(( F x.state = 11 &  F x.state = 12) &  F x.state = 13)  is false
 -- as demonstrated by the following execution sequence
 Trace Description: LTL Counterexample 
 Trace Type: Counterexample 
   -> State: 1.1 <-
-    x.state = 135
+    x.state = 96
   -> State: 1.2 <-
-    x.state = 98
-  -> State: 1.3 <-
-    x.state = 134
-  -> State: 1.4 <-
-    x.state = 105
-  -> State: 1.5 <-
-    x.state = 1
-  -> State: 1.6 <-
-    x.state = 104
-  -> State: 1.7 <-
-    x.state = 101
-  -> State: 1.8 <-
     x.state = 8
-  -> State: 1.9 <-
+  -> State: 1.3 <-
     x.state = 21
-  -> State: 1.10 <-
+  -> State: 1.4 <-
     x.state = 84
-  -> State: 1.11 <-
+  -> State: 1.5 <-
     x.state = 13
+  -> State: 1.6 <-
+    x.state = 61
+  -> State: 1.7 <-
+    x.state = 86
+  -> State: 1.8 <-
+    x.state = 93
+  -> State: 1.9 <-
+    x.state = 90
+  -> State: 1.10 <-
+    x.state = 24
+  -> State: 1.11 <-
+    x.state = 94
   -> State: 1.12 <-
-    x.state = 42
+    x.state = 103
   -> State: 1.13 <-
-    x.state = 44
+    x.state = 12
   -> State: 1.14 <-
-    x.state = 17
+    x.state = 107
   -> State: 1.15 <-
-    x.state = 43
-  -- Loop starts here
+    x.state = 112
   -> State: 1.16 <-
-    x.state = 66
+    x.state = 106
   -> State: 1.17 <-
-    x.state = 40
+    x.state = 115
   -> State: 1.18 <-
-    x.state = 66
+    x.state = 114
+  -> State: 1.19 <-
+    x.state = 102
+  -> State: 1.20 <-
+    x.state = 132
+  -> State: 1.21 <-
+    x.state = 130
+  -> State: 1.22 <-
+    x.state = 129
+  -> State: 1.23 <-
+    x.state = 128
+  -> State: 1.24 <-
+    x.state = 117
+  -> State: 1.25 <-
+    x.state = 11
+  -- Loop starts here
+  -> State: 1.26 <-
+    x.state = 122
+  -> State: 1.27 <-
+    x.state = 138
+  -> State: 1.28 <-
+    x.state = 122

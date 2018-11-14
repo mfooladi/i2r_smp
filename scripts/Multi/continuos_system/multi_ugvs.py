@@ -24,7 +24,8 @@ def read_pose(pos):
     init_pos.linear.y = pos.linear.y
     init_pos.angular.z = pos.angular.z
     p0 = [init_pos.linear.x, init_pos.linear.y]
-    rate = rospy.Rate(50)
+    rate = rospy.Rate(50
+                      )
     if initialized:
         ugv = vf.Robot(geometry_name=vf.r1_geometry, agent_radius=100, agent_id=1, v_max=.5, goals_file=vf.r1_goals, init_pos=p0)
         print ugv.geometry_name

@@ -1,0 +1,8 @@
+
+<launch>
+<node name="PPMarkers" pkg="phase_space_node" type="phasespacenode"/>	
+
+<node name="HKB" pkg="Kh_and_Parrot" type="Hplayerros_node_stage" args="-ip 192.168.1.11"/>
+
+</launch>
+

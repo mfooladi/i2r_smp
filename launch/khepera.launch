@@ -1,10 +1,6 @@
 <launch>
 <node name="PPMarkers" pkg="phase_space_node" type="phasespacenode"/>	
-<node name="HKC" pkg="Kh_and_Parrot"    type="playerros_node_phasespace" args="-ip 192.168.1.14"/>
-<node respawn="true" pkg="joy" type="joy_node" name="joyd" >
-    <param name="dev" type="string" value="/dev/input/js0" />
-    <param name="deadzone" value=".12" />
-    <param name="autorepeat_rate" value="1" />
-</node>
-<node pkg="i2rlab_demos" name="leader_khiii" type="leader_khiii"/>
+<node name="HKB" pkg="Kh_and_Parrot"    type="playerros_node_phasespace" args="-ip 192.168.1.11"/>
+
+
 </launch>

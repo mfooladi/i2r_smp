@@ -26,13 +26,15 @@ def read_pose(pos):
 def client_cb():
     global x, y, z, agent
     client = actionlib.SimpleActionClient('move_base_server', move_baseAction)
+
     client.wait_for_server()
     while True:
         try:
             goal = move_baseGoal(x_current = x, y_current = y, theta_current = z)
             client.send_goal(goal)
             client.wait_for_result(rospy.Duration.from_sec(2.0))
-
+            # rospy.loginfo(client.action_client.last_status_msg)
+            # rospy.loginfo(client.)
         except:
             rospy.loginfo('No position data available!')
 

@@ -339,7 +339,6 @@ class State(Triangle):
                 self.last_tri_gs.append(interval([angle_right, 180.], [-180., angle_left]))
             else:
                 self.last_tri_gs.append(interval([angle_right, angle_left]))
-        # print ('last triangle gs', self.last_tri_gs)
         return self.last_tri_gs
 
     def vertex_ijk(self):
@@ -348,7 +347,6 @@ class State(Triangle):
         self.global_vertex_index.append(self.v1v2v3(1)[2])
         for j in range(1, self.state_total_number):
             self.global_vertex_index.append(list(set(self.v1v2v3(j + 1)) - set(self.common_vertices(j, j + 1)))[0])
-        # #print self.global_vertex_index, 'global vertex index'
 
     def patches(self):
         self.patch_list = []
@@ -359,22 +357,20 @@ class State(Triangle):
         while state_iter <= self.state_total_number:
             self.patch_state_list.append(state_iter)
             new_g1 = new_g2 = new_g3 = interval([0,1])
-            # new_g1 = self.vector_field[self.v1v2v3(state_iter)[0]] & self.gs[state_iter - 1][0]
-            # new_g2 = self.vector_field[self.v1v2v3(state_iter)[1]] & self.gs[state_iter - 1][1]
-            # new_g3 = self.vector_field[self.v1v2v3(state_iter)[2]] & self.gs[state_iter - 1][2]
+
             try:
                 new_g1 = self.vector_field[self.v1v2v3(state_iter)[0]] & self.gs[state_iter - 1][0]
             except:
-                print 'v1 does not exist', self.v1v2v3(state_iter)[0]
+                pass
             try:
                 new_g2 = self.vector_field[self.v1v2v3(state_iter)[1]] & self.gs[state_iter - 1][1]
             except:
-                print 'v2 does not exist', self.v1v2v3(state_iter)[1]
+                pass
             try:
                 new_g3 = self.vector_field[self.v1v2v3(state_iter)[2]] & self.gs[state_iter - 1][2]
             except:
-                print 'v3 does not exist', self.v1v2v3(state_iter)[2]
-            #
+                pass
+
             if (new_g1 == interval() or new_g2 == interval() or new_g3 == interval()):
                 for i in range(0, 3):
                     if self.vector_field.has_key(self.v1v2v3(state_iter)[i]):  # if the vertice has been seen before
@@ -397,14 +393,6 @@ class State(Triangle):
             if state_iter == self.state_total_number:
                 self.patch_list.append(self.vector_field)
                 self.patch_length.append(state_iter - pre_length + 1)
-                # for i in range(1, self.state_total_number+1):
-                    # print 'State #', i,
-                    # print 'triangle #', self.triangle_number(i), 'Vertices #', self.v1v2v3(i)
-                # print '\n'
-                # for i in range(1, len(self.patch_list) + 1):
-                #     print 'patche', i, self.patch_list[i-1].keys() , '     Number of states in patch', i, 'is', self.patch_length[i-1]
-                #     print 'gs', [value1 for value1 in self.patch_list[i-1].values()]
-                    # print 'gs', [['%.1f' %value for value in list(value1[0])] for value1 in self.patch_list[i-1].values()]
                 break
 
             state_iter = state_iter + 1
@@ -476,11 +464,24 @@ class State(Triangle):
         return L
 
     def plot_triangles(self):
+        fig = plt.figure(1)
+        ax = plt.axes([0.0, 0, 1., 1.], frameon=False)
+        ax.get_xaxis().set_visible(False)
+        ax.get_yaxis().set_visible(False)
+        plt.autoscale(tight=True)
+        # plt.axis('tight')
+
         for i in range(0, self.number_of_triangles):
             for k in range(0, 3):
-                plt.plot([self.position(self.triangle_nodes[i][k])[0], self.position(self.triangle_nodes[i][np.mod(k + 1, 3)])[0]],
-                         [self.position(self.triangle_nodes[i][k])[1], self.position(self.triangle_nodes[i][np.mod(k + 1, 3)])[1]], 'k')
-        # plt.show()
+                ax = plt.plot([-self.position(self.triangle_nodes[i][k])[1], -self.position(self.triangle_nodes[i][np.mod(k + 1, 3)])[1]],
+                         [self.position(self.triangle_nodes[i][k])[0], self.position(self.triangle_nodes[i][np.mod(k + 1, 3)])[0]], 'k')
+        thismanager = plt.get_current_fig_manager()
+        thatmanager = plt.gcf()
+        thatmanager.set_figwidth(50)
+
+        thismanager.full_screen_toggle()
+        plt.savefig('triangles.png')
+        plt.show()
 
     def plot_vf_one_triangle(self, state_num = 1, patch_num = 1):
         # print 'patch', self.patch_list, self.patch_state_list
@@ -1428,4 +1429,4 @@ if __name__ == '__main__':
     trajectory_image_2 = trajectory_image_2.subsample(800, 800)
     uav_1_image = canvas.create_image(200, 100, image=quad1)
     uav_2_image = canvas.create_image(200, 100, image=quad2)
-    mainloop()
+    # mainloop()

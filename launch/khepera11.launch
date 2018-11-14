@@ -1,0 +1,12 @@
+
+<launch>
+	<!-- Launches Khepera_1 -->
+
+   <node name="KB" pkg="Kh_and_Parrot" type="playerros_node_new" args="-ip 192.168.1.11"/>
+
+
+  	<node name="laserposB" pkg="Kh_and_Parrot" type="KB" args="-ip 192.168.1.11"/>
+
+
+</launch>
+
